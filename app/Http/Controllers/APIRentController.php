@@ -46,16 +46,7 @@ class APIRentController extends Controller
         $validatedData['status'] = 'pending';
         $validatedData['transaction_end'] = null; 
 
-        // $validator = Validator::make($request->all(), $validatedData);
-        // if($validator->fails()){
-        //     return response()->json([
-        //         'status'=>false,
-        //         'message'=>$validator->errors(),
-        //     ],400);
-        // }
-        
         $rent = Rent::create($validatedData);
-
         return response()->json([
             'status'=>true,
             'message'=>'Create Data Sukses',

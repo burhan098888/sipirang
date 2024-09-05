@@ -19,4 +19,20 @@ class APIDaftarRuangController extends Controller
             ]
         ],200);
     }
+    
+    public function show($id){
+        $showRoom=Room::find($id);
+        if($showRoom){
+            return response()->json([
+                'status'=>true,
+                'message'=>"Get Detail Data Sukses",
+                'data'=>$showRoom
+            ],200);
+        }else{
+            return response()->json([
+                'status'=>false,
+                'message'=>"Get Detail Data Gagal"
+            ]);
+        }
+    }
 }

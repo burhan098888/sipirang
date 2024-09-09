@@ -13,6 +13,7 @@ use App\Http\Controllers\DashboardRoomController;
 use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\TemporaryRentController;
 use App\Http\Controllers\DashboardAdminController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +33,9 @@ Route::get('/', function () {
 });
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/register', [RegisterController::class, 'register']);
 
 Route::middleware(['auth'])->group(function () {
 

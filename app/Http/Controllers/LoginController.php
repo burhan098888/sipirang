@@ -9,28 +9,11 @@ class LoginController extends Controller
 {
     public function index()
     {
-        return view('login.index', [
+        return view('auth.login', [
             'title' => 'Login',
             'active' => 'login'
         ]);
     }
-
-    // public function authenticate(Request $request)
-    // {
-    //     $credentials = $request->validate([
-    //         'email' => 'required|email',
-    //         'password' => 'required'
-    //     ]);
-
-    //     if (Auth::attempt($credentials)) {
-    //         $request->session()->regenerate();
-
-    //         return redirect()->intended('/');
-    //     }
-
-    //     return back()->with('loginError', 'Gagal melakukan proses autentikasi. Mohon untuk mengisi email & password dengan benar.');
-    // }
-
     public function authenticate(Request $request)
     {
         $credentials = $request->validate([

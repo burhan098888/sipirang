@@ -42,6 +42,7 @@
                             <th scope="row">Waktu Transaksi</th>
                             <th scope="row">Kembalikan</th>
                             <th scope="row">Status Pinjam</th>
+                            <th scope="row">Keterangan</th>
                             @if (auth()->user()->role_id <= 2)
                                 <th scope="row">Action</th>
                             @endif
@@ -60,9 +61,35 @@
                                     <td>{{ $rent->purpose }}</td>
                                     <td>{{ $rent->transaction_start }}</td>
                                     @if ($rent->status == 'dipinjam')
-                                        <td><a href="/dashboard/rents/{{ $rent->id }}/endTransaction"
-                                                class="btn btn-success" type="submit" style="padding: 2px 10px"><i
-                                                    class="bi bi-check fs-5"></i></a></td>
+                                        <td>
+                                            <button class="btn btn-success" type="button" style="padding: 2px 10px" data-bs-toggle="modal" data-bs-target="#keteranganModal-{{ $rent->id }}">
+                                                <i class="bi bi-check fs-5"></i>
+                                            </button>
+
+                                            <div class="modal fade" id="keteranganModal-{{ $rent->id }}" tabindex="-1" aria-labelledby="keteranganModalLabel-{{ $rent->id }}" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <form action="/dashboard/rents/{{ $rent->id }}/endTransaction" method="POST">
+                                                            @csrf
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="keteranganModalLabel-{{ $rent->id }}">Keterangan Pengembalian</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="mb-3">
+                                                                    <label for="keterangan-{{ $rent->id }}" class="form-label">Keterangan</label>
+                                                                    <textarea class="form-control" id="keterangan-{{ $rent->id }}" name="keterangan" rows="3" required></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                                                                <button type="submit" class="btn btn-primary">Simpan</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
                                     @else
                                         @if (!is_null($rent->transaction_end))
                                             <td>{{ $rent->transaction_end }}</td>
@@ -71,6 +98,15 @@
                                         @endif
                                     @endif
                                     <td>{{ $rent->status }}</td>
+                                    <td>
+                                        @if ($rent->status == 'dikembalikan')
+                                            Sudah dikembalikan
+                                        @elseif ($rent->status == 'ditolak')
+                                            Peminjaman ditolak
+                                        @else
+                                            -
+                                        @endif
+                                    </td>
 
                                     @if (auth()->user()->role_id === 1)
                                         <td>

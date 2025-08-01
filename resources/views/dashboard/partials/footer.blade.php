@@ -1,7 +1,7 @@
  <!-- Start Footer -->
  <footer class="footer d-flex justify-content-center">
     <div class="container">
-      &copy; Copyright <strong><span>SiManuk</span></strong
+      &copy; Copyright <strong><span>SIPIRANG</span></strong
       >. All Rights Reserved
     </div>
   </footer>

@@ -77,7 +77,6 @@
                     <div class="contact-form-wrapper">
                         <form action="/daftarpinjam" method="post">
                             @csrf
-                            <input type="hidden" name="room_id" id="room_id">
                             <div class="row">
                                 <div class="col-12 mb-3">
                                     <label for="room_id" class="form-label d-block">Kode Ruangan</label>
@@ -126,6 +125,7 @@
                             <div class="row">
                                 <div class="col-12 text-right">
                                     <button class="main-btn btn-hover" type="submit">Send</button>
+                                    <button class="main-btn btn-hover" type="button" id="download-pdf-btn">Download PDF</button>
                                 </div>
                             </div>
                         </form>
@@ -136,3 +136,21 @@
     </section>
     <!--====== Daftar Ruang ======-->
 @endsection
+
+@push('scripts')
+<script>
+document.getElementById('download-pdf-btn').addEventListener('click', function() {
+    var form = this.closest('form');
+    var originalAction = form.action;
+    var originalTarget = form.target;
+
+    form.action = '/daftarpinjam/pdf';
+    form.target = '_blank';
+    form.submit();
+
+    // Kembalikan ke semula agar tombol Send tetap berfungsi normal
+    form.action = originalAction;
+    form.target = originalTarget;
+});
+</script>
+@endpush

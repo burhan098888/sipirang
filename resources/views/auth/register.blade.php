@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>{{ $title }} | Universitas Teknokrat Indonesia</title>
+    <title>{{ $title }} | Universitas Mohammad Husni Thamrin</title>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'>
     <link rel="stylesheet" href="./style.css">
 
@@ -139,7 +139,7 @@
     <div class="login-form">
         <form action="/register" method="post" class="form-input">
             @csrf
-            <h1>Register</h1>
+            <h1>Registrasi</h1>
             <div class="content">
                 @if (session()->has('regiserror'))
                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -149,7 +149,7 @@
                 @endif
                 <div class="input-field">
                     <input type="text" class="input-field border-0" required
-                        placeholder="Your Name @error('name') is-invalid @enderror" value="{{ old('name') }}"
+                        placeholder="NAMA LENGKAP @error('name') is-invalid @enderror" value="{{ old('name') }}"
                         name="name" id="name-content-4-1" />
                     @error('name')
                         <div class="invalid-feedback" style="display: block">
@@ -159,7 +159,7 @@
                 </div>
                 <div class="input-field">
                     <input type="number" class="input-field border-0" required
-                        placeholder="Your NPM @error('nomor_induk') is-invalid @enderror"
+                        placeholder="NIM ANDA @error('nomor_induk') is-invalid @enderror"
                         value="{{ old('nomor_induk') }}" name="nomor_induk" id="nomor_induk-content-4-1" />
                     @error('nomor_induk')
                         <div class="invalid-feedback" style="display: block">
@@ -169,7 +169,7 @@
                 </div>
                 <div class="input-field">
                     <input class="input-field border-0" type="email" required
-                        placeholder="Your Email Address @error('email') is-invalid @enderror"
+                        placeholder="EMAIL ANDA @error('email') is-invalid @enderror"
                         value="{{ old('email') }}" class="input-form" name="email" id="floatingInput" autofocus
                         autocomplete="off" />
                     @error('email')
@@ -180,7 +180,7 @@
                 </div>
                 <div class="input-field">
                     <input type="password" class="input-field border-0" required
-                        placeholder="Your Password @error('password') is-invalid @enderror"
+                        placeholder="PASSWORD ANDA @error('password') is-invalid @enderror"
                         value="{{ old('password') }}" name="password" id="password-content-4-1" />
                     @error('password')
                         <div class="invalid-feedback" style="display: block">

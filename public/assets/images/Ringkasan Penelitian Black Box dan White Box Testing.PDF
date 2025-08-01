@@ -1,0 +1,16 @@
+# Ringkasan Penelitian: Black Box dan White Box Testing
+
+## 1. Latar Belakang Penelitiannya Tentang Apa?
+Penelitian ini membahas pentingnya **pengujian perangkat lunak (software testing)** dalam memastikan kualitas dan keandalan perangkat lunak. Pengujian perangkat lunak adalah proses untuk mengidentifikasi kesalahan, cacat, atau bug dalam kode aplikasi yang perlu diperbaiki. Fokus utama penelitian ini adalah melakukan tinjauan literatur terhadap dua teknik pengujian utama: **Black Box Testing** dan **White Box Testing**. Tujuannya adalah untuk memahami perbedaan, kelebihan, serta kekurangan kedua teknik ini, dan bagaimana teknik tersebut dapat diterapkan dalam pengujian perangkat lunak. Penelitian ini menekankan bahwa pemilihan teknik pengujian yang tepat sangat bergantung pada konteks dan tujuan pengujian, sehingga membantu pengembang dan penguji dalam mengambil keputusan yang efektif.
+
+## 2. Metode Penelitiannya Seperti Apa?
+Penelitian ini menggunakan metode **literatur review** yang sistematis, mengikuti panduan dari B. Kitchenham. Penulis mengumpulkan data dengan mencari literatur menggunakan kata kunci seperti "Black Box" dan "White Box" bersama "software testing" di berbagai database ilmiah, termasuk IEEE, Engineering Village, dan Science Direct. Sebanyak **29 artikel relevan** dianalisis, terdiri dari jurnal, makalah konferensi, dan literatur abu-abu. Selain itu, penelitian ini menyertakan studi kasus perhitungan premi asuransi untuk pengemudi sebagai contoh praktis untuk mengilustrasikan penerapan teknik Black Box dan White Box dalam pengujian.
+
+## 3. Hasil Penelitiannya Apa?
+Penelitian ini memberikan tinjauan mendalam tentang teknik pengujian Black Box dan White Box:
+- **Black Box Testing**: Meliputi metode seperti *Equivalence Class Partitioning*, *Boundary Value Analysis*, *Decision Tables*, *State Transition Diagrams*, *Orthogonal Arrays*, dan *All Pairs Testing*. Teknik ini fokus pada pengujian fungsionalitas perangkat lunak berdasarkan spesifikasi, tanpa memperhatikan struktur kode internal.
+- **White Box Testing**: Mencakup *Static White Box Testing* (seperti *Desk Checking*, *Code Walkthrough*, *Formal Inspections*) dan *Structural White Box Testing* (seperti *Control Flow/Coverage Testing*, *Basic Path Testing*, *Loop Testing*, *Data Flow Testing*). Teknik ini menguji logika dan struktur internal kode perangkat lunak.
+Penelitian juga menyajikan contoh kasus perhitungan premi asuransi, lengkap dengan *test cases* dan *test data*, untuk menunjukkan penerapan praktis kedua teknik tersebut.
+
+## 4. Kesimpulannya Apa?
+Penelitian menyimpulkan bahwa **Black Box Testing** dan **White Box Testing** sama-sama penting untuk memastikan kualitas perangkat lunak. Black Box efektif untuk menguji fungsionalitas dari perspektif pengguna akhir, sedangkan White Box lebih cocok untuk menguji logika dan struktur kode. Pemilihan teknik tergantung pada konteks pengujian, tujuan, dan sumber daya yang tersedia. Untuk pengujian yang lebih komprehensif, kombinasi kedua teknik sering kali diperlukan. Penelitian ini juga menyarankan adanya penelitian lanjutan untuk memvalidasi efektivitas teknik-teknik ini dari perspektif industri.

@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
 
-    <title> {{ $title }} | Universitas Teknokrat Indonesia </title>
+    <title> {{ $title }} |  Universitas Mohammad Husni Thamrin </title>
 
     <meta name="description" content="">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/UNIVERSITAS TEKNOKRAT.png') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/sipirang.png') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/LineIcons.2.0.css') }}">
@@ -116,6 +116,7 @@
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
 </script>
 
+@stack('scripts')
 
 </body>
 

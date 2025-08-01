@@ -65,6 +65,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/showruang/{room:code}', [DaftarRuangController::class, 'show']);
     Route::get('/daftarpinjam', [DaftarPinjamController::class, 'index']);
     Route::post('/logout', [LoginController::class, 'logout']);
+    Route::post('/daftarpinjam/pdf', [\App\Http\Controllers\DaftarPinjamController::class, 'cetakPdf'])->name('daftarpinjam.cetakPdf');
 
 });
 

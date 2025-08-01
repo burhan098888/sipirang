@@ -19,6 +19,7 @@
                             <th scope="row">Mulai Transaksi</th>
                             <th scope="row">Status Pinjam</th>
                             <th scope="row">Action</th>
+                            <th scope="row">Keterangan</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -46,11 +47,22 @@
                                                     class="bi bi-x-lg"></i></a>
                                         </td>
                                     @endif
+                                    <td>
+                                        @if($rent->status === 'pending')
+                                            Menunggu persetujuan
+                                        @elseif($rent->status === 'accepted')
+                                            Disetujui
+                                        @elseif($rent->status === 'declined')
+                                            Ditolak
+                                        @else
+                                            -
+                                        @endif
+                                    </td>
                                 </tr>
                             @endforeach
                         @else
                             <tr>
-                                <td colspan="9" class="text-center">
+                                <td colspan="10" class="text-center">
                                     -- Belum Ada Daftar Peminjam --
                                 </td>
                             </tr>

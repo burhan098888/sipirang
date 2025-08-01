@@ -6,7 +6,7 @@
                  <div class="col-xl-12">
                      <nav class="navbar navbar-expand-lg">
                          <a class="navbar-brand" href="index.html">
-                             <img id="logo" src="{{ asset('assets/images/logo-uti.png') }}" alt="Logo">
+                             <img id="logo" src="{{ asset('assets/images/sipirang.png') }}" alt="Logo" style="width: 70px; height: auto;">
                          </a>
                          <button class="navbar-toggler" type="button" data-toggle="collapse"
                              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -22,7 +22,7 @@
                                  </li>
                                  @auth
                                      <li class="nav-item">
-                                         <a href="/daftarruang" class="text-warning">Daftar Ruang</a>
+                                         <a href="/daftarruang" class="text-warning">Daftar Ruangan</a>
                                      </li>
                                      <li class="nav-item">
                                          <a href="/daftarpinjam" class="text-warning">Daftar Peminjaman</a>
